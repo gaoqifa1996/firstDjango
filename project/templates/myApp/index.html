@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>啊哈</h1>
+    {% if num %}
+    <h1>num : {{ num }} </h1>
+    {% endif %}
+
+    {% ifequal 1 1 %}
+    <h1>shuchu</h1>
+    {% endifequal %}
+
+    {% ifnotequal 1 2 %}
+    <h1>shuchu</h1>
+    {% endifnotequal %}
+
+    <p>{{ str|upper }}</p>
+</body>
+</html>
