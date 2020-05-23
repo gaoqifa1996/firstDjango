@@ -25,6 +25,8 @@ urlpatterns = [
     url(r'^logout1',views.logout1),
     url(r'^index/$',views.index),
     url(r'^good/(\d+)/$',views.good,name='good'),
-    url(r'^from/$',views.frombase)
+    url(r'^from/$',views.frombase),
+    url(r'^savefile/$',views.savefile),
+    url(r'^upfile/$',views.upfile),
 ]
 

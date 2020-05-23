@@ -1,9 +1,13 @@
+import os
+
 from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
 
 from myApp.models import Grades, Students
+
+
 
 
 def index(request):
@@ -132,5 +136,23 @@ def good(request,id):
 def frombase(request):
     return render(request,'myApp/form.html')
 
+
+def upfile(request):
+    return render(request,'myApp/upfile.html')
+
+
+import project.settings
+def savefile(request):
+    # print(request.method)
+    if request.method == 'POST':
+        f = request.FILES['file']
+        fpath = os.path.join(project.settings.MDEIA_ROOT,f.name)
+
+        with open(fpath,'wb') as fp:
+            for info in f.chunks():
+                fp.write(info)
+        return HttpResponse('上传成功')
+    else:
+        return HttpResponse('上传失败')
 
 
