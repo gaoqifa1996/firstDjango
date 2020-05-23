@@ -5,9 +5,11 @@
     <title>Title</title>
 </head>
 <body>
+    <a href="/good/">good</a>
+    <a href="{% url 'app:good' 1 %}">jjjj</a>
     <h1>啊哈</h1>
     {% if num %}
-    <h1>num : {{ num }} </h1>
+    <h1>num : {{ id }} </h1>
     {% endif %}
 
     {% ifequal 1 1 %}
@@ -19,5 +21,10 @@
     {% endifnotequal %}
 
     <p>{{ str|upper }}</p>
+
+    <p>num = {{ num | add:10 }}</p>
+    <p>num = {{ num | add:-10 }}</p>
+    <p>num = {% widthratio num 1 5 %}</p>
+    <p>num = {% widthratio num 5 1 %}</p>
 </body>
 </html>

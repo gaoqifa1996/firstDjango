@@ -8,9 +8,15 @@
     <h1>学生信息表</h1>
     <ul>
         {% for student in students %}
-        <li>
-            {{ student.sname }}--{{ student.sage }}--{{ student.scontend }}
-        </li>
+            {% if forloop.counter|divisibleby:2 %}
+                <li style="color: blue">
+                    {{ forloop.counter }}--{{ student.sname }}--{{ student.sage }}--{{ student.scontend }}
+                </li>
+            {% else %}
+                <li style="color: green">
+                    {{ forloop.counter }}--{{ student.sname }}--{{ student.sage }}--{{ student.scontend }}
+                </li>
+            {% endif %}
         {% endfor %}
 
 

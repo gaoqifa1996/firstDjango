@@ -122,4 +122,15 @@ def logout1(request):
 
 
 def index(request):
-    return render(request,'myApp/index.html',{'num':0,'str':'hello'})
+    return render(request,'myApp/index.html',{'num':10,'str':'hello'})
+
+
+def good(request,id):
+    return render(request,'myApp/good.html',{'num':id})
+
+
+def frombase(request):
+    return render(request,'myApp/form.html')
+
+
+

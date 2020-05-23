@@ -11,9 +11,9 @@ urlpatterns = [
     url(r'^students/$',views.studentsView),
     url(r'^students2/$',views.studentsView2),
     url(r'^students3/(\d+)$',views.student_page),
-    url(r'grades/(\d+)/$',views.gradesStudents),
-    url(r'createstudent/$',views.createStudent),
-    url(r'createstudent2/$',views.createStudent2),
+    url(r'^grades/(\d+)/$',views.gradesStudents),
+    url(r'^createstudent/$',views.createStudent),
+    url(r'^createstudent2/$',views.createStudent2),
     url(r'^showregist/$',views.showregist),
     url(r'^showregist/regist/$',views.regist),
     url(r'^cookietext/$',views.cookietext),
@@ -24,5 +24,7 @@ urlpatterns = [
     url(r'^showmain/$',views.showmain),
     url(r'^logout1',views.logout1),
     url(r'^index/$',views.index),
+    url(r'^good/(\d+)/$',views.good,name='good'),
+    url(r'^from/$',views.frombase)
 ]
 

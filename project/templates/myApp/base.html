@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>base</title>
+    <style>
+        #top{
+            width: 100%;
+            height: 100px;
+            background-color: green;
+        }
+
+        #bottom{
+            width: 100%;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="top"></div>
+    <div id="info">
+        {% block info %}
+        {% endblock info %}
+
+        {% block info1 %}
+        {% endblock info1 %}
+    </div>
+    <div id="bottom"></div>
+</body>
+</html>
